@@ -1,9 +1,3 @@
-
 <div class="spinnerContainer">
-<img class='spinner' src='./images/spinner.png'>
+    <img class='spinner' src='./images/spinner.png'>
 </div>
-
-
-
-
-   
