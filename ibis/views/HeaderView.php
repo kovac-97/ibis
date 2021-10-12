@@ -1,7 +1,7 @@
     <?php
     require_once('../models/Header.php');
     $self = new Header();
-    include ('../views/LoadingView.php');
+    include('../views/LoadingView.php');
     ?>
 
     <div class='header'>

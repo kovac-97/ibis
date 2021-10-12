@@ -10,7 +10,7 @@ class CredentialsAuthenticator implements Authenticator
     function __construct()
     {
         //dummy user
-        $this->user = new User('', '', false); 
+        $this->user = new User('', '', false);
     }
 
     public function authenticate()

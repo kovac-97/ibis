@@ -35,8 +35,8 @@ function disableOverlay() {
     //tek sekund i po nakon učitavanja stranice
     let overlay = document.getElementsByClassName('spinnerContainer')[0];
     setTimeout(() => {
-        overlay.style.opacity='0';
-    },1200);
+        overlay.style.opacity = '0';
+    }, 1200);
     setTimeout(() => {
         overlay.style.display = 'none';
     }, 1500);
