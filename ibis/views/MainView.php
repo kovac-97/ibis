@@ -26,7 +26,7 @@ $modals = Modal::GetModals();
             <p class='title'>Alpha</p>
             <p class='paragraph'>Another fine responsive site template freebie by HTML5 UP</p>
             <div class="bannerNav">
-                <a href='#'>Sign Up</a>
+                <a onclick='logOut()' href='#'>Log Out</a>
                 <a href='#'>Learn More</a>
             </div>
         </div>
