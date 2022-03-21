@@ -18,4 +18,15 @@ class LoginController
     {
         return $this->auth->getAuthenticatedUser();
     }
+
+    public function generateCookie()
+    {
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $token = base64_encode(random_bytes(20));
+        setcookie('token', $token);
+        $_SESSION['token'] = $token;
+        $_SESSION['user'] = serialize($this->getUser());
+    }
 }

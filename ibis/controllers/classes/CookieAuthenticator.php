@@ -2,7 +2,6 @@
 
 
 require_once('../controllers/interfaces/Authenticator.php');
-require_once('../controllers/DatabaseController.php');
 require_once('../models/User.php');
 class CookieAuthenticator implements Authenticator
 {
@@ -17,9 +16,12 @@ class CookieAuthenticator implements Authenticator
 
     public function authenticate()
     {
+        if(!isset($_SESSION)){
+            session_start();
+        }
         //autentifikacija pomoću cookie-a
         if (isset($_SESSION['token']) && isset($_COOKIE['token']) && $_SESSION['token'] === $_COOKIE['token']) {
-            $this->user = unserialize($_SESSION[session_id()]);
+            $this->user = unserialize($_SESSION['user']);
             return true;
         } else {
             return false;

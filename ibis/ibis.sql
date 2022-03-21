@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 11, 2021 at 09:18 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.5
+-- Generation Time: Mar 21, 2022 at 09:05 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `ibis`
 --
-CREATE DATABASE IF NOT EXISTS `ibis` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `ibis`;
 
 -- --------------------------------------------------------
 
@@ -54,17 +52,16 @@ CREATE TABLE `users` (
   `Ime` text NOT NULL,
   `Prezime` text NOT NULL,
   `E-mail` text NOT NULL,
-  `Password Hash` char(64) NOT NULL
+  `Password Hash` char(64) NOT NULL,
+  `salt` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Ime`, `Prezime`, `E-mail`, `Password Hash`) VALUES
-('Nikola', 'Kovač', 'kovanikola@gmail.com', 'a108d6d354a18ab7b395f000a7f08d1dd26cd64666b396281d7b4df08ac5bdb6'),
-('Marko', 'Marković', 'marko@yahoo.com', '8c5faf36ce0dae48351f5e09c5133fdaddcf52d9baf4369db027766a12c1742f'),
-('Petar', 'Petrović', 'pero@mail.com', '9d6245d7fb961b620b28c91d22e1a585413743388dc1833e678129f1751d94ae');
+INSERT INTO `users` (`Ime`, `Prezime`, `E-mail`, `Password Hash`, `salt`) VALUES
+('Nikola', 'Kovač', 'kovanikola@gmail.com', 'b7ab7386dce2590263c477b1c311b63a539566d93bee46a3b23c41b08bce78e0', 'yggT5wSzcLQltdE6nQcyKZj0bMo=');
 
 --
 -- Indexes for dumped tables
