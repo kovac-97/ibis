@@ -8,4 +8,4 @@ DocumentRoot "C:/xampp/htdocs" =>  DocumentRoot "C:/xampp/htdocs/ibis/public_htm
 <Directory "C:/xampp/htdocs">  => <Directory "C:/xampp/htdocs/ibis/public_html">
 Pomoću browsera ući na localhost/
 
-Šifre postojećih korisnika su njihova imena unijeta malim slovima.
+Kreirati nalog i logovati se
